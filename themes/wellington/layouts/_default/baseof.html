@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+  {{ partial "head.html" . }}
+  <body
+    class="home blog logged-in admin-bar no-customize-support post-layout-one-column"
+  >
+    <div id="header-top" class="header-bar-wrap"></div>
+    <div id="page" class="hfeed site">
+      <a class="skip-link screen-reader-text" href="#content"
+        >Skip to content</a
+      >
+      {{ partial "header.html" . }}
+      <div id="content" class="site-content container clearfix">
+        <section id="primary" class="content-archive content-area">
+          {{ block "main" . }} {{ end }}
+        </section>
+
+        <section
+          id="secondary"
+          class="sidebar widget-area clearfix"
+          role="complementary"
+        >
+          {{ partial "sidebar.html" . }}
+        </section>
+      </div>
+      <div id="footer" class="footer-wrap">
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </body>
+</html>
